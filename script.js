@@ -209,3 +209,21 @@ function sendEmail() {
     }
   );
 }
+
+
+// open window pop up 
+const button = document.getElementById("open-pop-up");
+button.addEventListener("click", () => {
+  // const  // Specify the URL and other properties for the popup window
+  var popupUrl = 'https://www.example.com'; // Replace with the URL you want to open
+  var popupName = 'popupWindow';
+  var popupFeatures = 'width=600,height=400,scrollbars=yes';
+
+  // Open the popup window
+  var popupWindow = window.open(popupUrl, popupName, popupFeatures);
+
+  // Check if the popup window was blocked by the browser's popup blocker
+  if (!popupWindow || popupWindow.closed || typeof popupWindow.closed == 'undefined') {
+      alert('Popup was blocked by the browser. Please allow popups for this website.');
+  }
+})
