@@ -1059,6 +1059,52 @@ h2.counter span {
   font-size: 25px;
 }
 
+/* ============== Toast message show ======================= */
+
+/* Styles for the toast container */
+#toastContainer {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: max-content;
+  z-index: 2000;
+}
+
+/* Styles for the individual toast */
+.toast {
+  /* background: linear-gradient(
+    180deg,
+    rgba(247, 1, 120, 1) 0%,
+    rgba(160, 8, 156, 1) 51%,
+    rgba(99, 13, 178, 1) 100%
+  ); */
+  background: #000;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Styles for the show and hide animation */
+.toast.show {
+  opacity: 1;
+}
+
+.toast.hide {
+  opacity: 0;
+}
+
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
+}
 /*======================= @keyframes ============================ */
 
 @keyframes moveText {

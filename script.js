@@ -285,6 +285,7 @@ ScrollReveal().reveal(
 );
 
 // send email from client contact from to me
+const contactForm = document.getElementById("contact-form");
 // Initialize EmailJS
 emailjs.init("ftaN7ot6b9YzcykmO");
 
@@ -300,13 +301,48 @@ function sendEmail() {
     message: formData.get("message"),
   };
 
-  // Send email
-  emailjs.send("service_2egi7ik", "template_yhzg7um", templateParams).then(
-    function (response) {
-      console.log("Email sent successfully!", response);
-    },
-    function (error) {
-      console.log("Error sending email:", error);
-    }
-  );
+  const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  if (emailPattern.test(formData.get("email"))) {
+    // Send email
+    emailjs.send("service_2egi7ik", "template_yhzg7um", templateParams).then(
+      function (response) {
+        showToast(response);
+        contactForm.reset();
+      },
+      function (response) {
+        showToast(response);
+        console.log("Error sending email:", error);
+      }
+    );
+  } else showToast(0);
+}
+
+// show toast
+function showToast(res) {
+  // toast message when email is succesfully send
+  const toastContainer = document.getElementById("toastContainer");
+
+  const toast = document.createElement("div");
+  if (res.status === 200) {
+    console.log("yes email send hoise");
+    toast.innerText = "✅ Email Sent Successfully!";
+  } else if (res === 0) {
+    toast.innerText = "❌ Please Provide Valid Email!";
+  } else {
+    console.log("email send hoinai tai error block");
+    toast.innerText = "❌ Error Sending Email!";
+  }
+
+  toast.classList.add("toast");
+  toastContainer.appendChild(toast);
+  setTimeout(() => {
+    toast.classList.add("show");
+    setTimeout(() => {
+      toast.classList.remove("show");
+      toast.classList.add("hide");
+      setTimeout(() => {
+        toast.remove();
+      }, 500); // Remove toast after the animation
+    }, 2000); // Show the toast for 3 seconds
+  }, 100); // Delay the toast appearance slightly for better animation
 }
