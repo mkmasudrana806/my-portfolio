@@ -1,3 +1,104 @@
+// load blog data
+
+function loadBlog() {
+  fetch("/data/blogs.json")
+    .then((res) => res.json())
+    .then((data) => displayBlog(data));
+}
+
+function displayBlog(blogs) {
+  const blogsContainer = document.getElementById("cards");
+  blogs.forEach((blog) => {
+    const div = document.createElement("div");
+    div.classList.add("card", "swiper-slide");
+    div.innerHTML = `
+      <div class="card-top">
+        <img src="${blog.img}" alt="" />
+      </div>
+      <div class="card-info">
+        <h2 class="truncate-to-1-lines">${blog.title}</h2>
+        <span class="date">${blog.date}</span>
+        <p class="excerpt truncate-to-5-lines">
+          ${blog.description.replace(/\n/g, "<br>")}
+        </p>
+        <button  class="readMore">Explore More</button>
+      </div>
+    `;
+    // when user click on the read more button then modal pop-up will show
+    div.querySelector(".readMore").addEventListener("click", () => {
+      openModal(blog);
+    });
+    blogsContainer.appendChild(div);
+  });
+}
+
+// open modal for blog function
+function openModal(blog) {
+  console.log(blog);
+  const modal = document.getElementById("modal");
+  modal.innerHTML = "";
+  const div = document.createElement("div");
+  div.innerHTML = `
+    <h2>${blog.title}</h2>
+    <br\>
+    <hr \>
+    <br\>
+    <img src=${blog.img} alt="" />
+    <br>
+    <p> ${blog.description.replace(/\n/g, "<br /> <br />")}</p>
+  `;
+  modal.append(div);
+  const modalOverlay = document.getElementById("modalOverlay");
+  modalOverlay.classList.add("active");
+  closeModalButton.addEventListener("click", () => {
+    modalOverlay.classList.remove("active");
+  });
+}
+
+loadBlog();
+
+// below is for services load and modal
+
+function loadServicesData() {
+  fetch("/data/services.json")
+    .then((res) => res.json())
+    .then((data) => displayServices(data));
+}
+
+function displayServices(services) {
+  const servicesContainer = document.getElementById("allServices");
+  services.forEach((service) => {
+    const div = document.createElement("div");
+    div.classList.add("servicesItem");
+    div.id = "servicesItem";
+
+    div.innerHTML = `
+     <div class="icon-services">
+            <i class="bx bx-code-alt"></i>
+            <span></span>
+          </div>
+          <h3 class="truncate-to-1-lines">${service?.title}</h3>
+          <p class="truncate-to-5-lines">
+            ${service.description}
+          </p>
+          <button
+            href="#"
+            class="readMore"
+            id="open-pop-up"
+            >Read More</button
+          >
+    `;
+    // when user click on the read more button then modal pop-up will show
+    div.querySelector(".readMore").addEventListener("click", () => {
+      openModal(service);
+      console.log("yes service is clicked", service);
+    });
+    servicesContainer.appendChild(div);
+  });
+}
+
+loadServicesData();
+
 // active hamburger menu
 let menuIcon = document.querySelector(".menu-icon");
 let navlist = document.querySelector(".navlist");
@@ -166,8 +267,8 @@ window.addEventListener("scroll", activeMenu);
 
 ScrollReveal({
   distance: "90px",
-  duration: 2000,
-  delay: 200,
+  duration: 1500,
+  delay: 150,
   // reset: true ,
 });
 
@@ -209,21 +310,3 @@ function sendEmail() {
     }
   );
 }
-
-
-// open window pop up 
-const button = document.getElementById("open-pop-up");
-button.addEventListener("click", () => {
-  // const  // Specify the URL and other properties for the popup window
-  var popupUrl = 'https://www.example.com'; // Replace with the URL you want to open
-  var popupName = 'popupWindow';
-  var popupFeatures = 'width=600,height=400,scrollbars=yes';
-
-  // Open the popup window
-  var popupWindow = window.open(popupUrl, popupName, popupFeatures);
-
-  // Check if the popup window was blocked by the browser's popup blocker
-  if (!popupWindow || popupWindow.closed || typeof popupWindow.closed == 'undefined') {
-      alert('Popup was blocked by the browser. Please allow popups for this website.');
-  }
-})

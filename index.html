@@ -44,6 +44,13 @@
       </div>
     </header>
 
+    <!-- blogs data  -->
+    <!-- <div class="blogs">
+      <div class="blog">
+        <h3></h3>
+      </div>
+    </div> -->
+
     <!-- hero section  -->
     <section class="home" id="home">
       <div class="hero-info">
@@ -128,9 +135,9 @@
         </p>
 
         <div class="about-btn">
-          <button class="active">Main Skills</button>
-          <button>Tools & Language</button>
-          <button>Education</button>
+          <button class="active btn-simple">Main Skills</button>
+          <button class="btn-simple">Tools & Language</button>
+          <button class="btn-simple">Education</button>
         </div>
 
         <!-- main skills  -->
@@ -195,84 +202,7 @@
         <span>what i will do for you</span>
       </div>
 
-      <div class="allServices">
-        <div class="servicesItem">
-          <div class="icon-services">
-            <i class="bx bx-code-alt"></i>
-            <span></span>
-          </div>
-          <h3>Web Development</h3>
-          <p class="truncate-to-5-lines">
-            Our web development services encompass a wide range of expertise,
-            including front-end and back-end development. With a focus on
-            crafting functional and visually appealing websites and
-            applications, we utilize the latest technologies to bring your
-            digital vision to life. Whether you need a dynamic single-page
-            application (SPA), a robust e-commerce platform, or a custom web
-            solution, our team is dedicated to delivering a seamless user
-            experience and efficient performance.
-          </p>
-          <a href="#" class="readMore" id="open-pop-up">Read More</a>
-        </div>
-
-        <div class="servicesItem">
-          <div class="icon-services">
-            <i class="bx bx-layer"></i>
-            <span></span>
-          </div>
-          <h3>UI / UX Design</h3>
-          <p class="truncate-to-5-lines">
-            Our UI/UX design services revolve around creating user-centric
-            interfaces that enhance overall user experience. We specialize in
-            designing intuitive user interfaces that are not only visually
-            captivating but also highly usable. Our approach involves meticulous
-            wireframing and prototyping, ensuring that the interaction flow is
-            smooth and engaging. We aim to strike the perfect balance between
-            aesthetics and functionality, resulting in designs that resonate
-            with your audience.
-          </p>
-          <a href="#" class="readMore">Read More</a>
-        </div>
-
-        <div class="servicesItem">
-          <div class="icon-services">
-            <i class="bx bx-desktop"></i>
-            <span></span>
-          </div>
-          <h3>Maintenance & Support</h3>
-          <p class="truncate-to-5-lines">
-            Our e-commerce solutions cater to businesses looking to establish a
-            strong online presence and boost their sales. We provide
-            comprehensive e-commerce website development services, incorporating
-            user-friendly navigation, secure payment gateways, and a seamless
-            shopping cart experience. Our solutions are tailored to your
-            specific needs, allowing you to effectively showcase your products,
-            manage inventory, and offer a convenient shopping journey to your
-            customers.
-          </p>
-          <a href="#" class="readMore">Read More</a>
-        </div>
-
-        <div class="servicesItem">
-          <div class="icon-services">
-            <i class="bx bxs-party"></i>
-            <span></span>
-          </div>
-          <h3>Web & Mobile Optimization</h3>
-          <p class="truncate-to-5-lines">
-            With our web and mobile optimization services, we fine-tune your
-            digital assets for optimal performance and user satisfaction. Our
-            focus lies in enhancing loading speeds, responsiveness, and
-            compatibility across various devices and screen sizes. By applying
-            industry best practices and cutting-edge techniques, we ensure that
-            your website or app maintains its functionality and visual appeal,
-            even under high user loads. Our optimization efforts guarantee a
-            smooth experience for every visitor, regardless of the platform
-            they're using.
-          </p>
-          <a href="#" class="readMore">Read More</a>
-        </div>
-      </div>
+      <div class="allServices" id="allServices"></div>
 
       <div class="proposal">
         <div class="text-box">
@@ -292,18 +222,28 @@
       </div>
     </section>
 
+    <!-- my project portfolio section  -->
     <section class="portfolio" id="projects">
       <div class="main-text">
         <h2 class="heading">My Projects</h2>
         <span>I have developed these Project</span>
       </div>
       <div class="fillter-buttons">
-        <button class="button mixitup-control-active" data-filter="all">
+        <button
+          class="button mixitup-control-active btn-simple"
+          data-filter="all"
+        >
           All Work
         </button>
-        <button class="button" data-filter=".design">Web Design</button>
-        <button class="button" data-filter=".frontend">Frontend Project</button>
-        <button class="button" data-filter=".mern">MERN Stack</button>
+        <button class="button btn-simple" data-filter=".design">
+          Web Design
+        </button>
+        <button class="button btn-simple" data-filter=".frontend">
+          Frontend Project
+        </button>
+        <button class="button btn-simple" data-filter=".mern">
+          MERN Stack
+        </button>
       </div>
 
       <div class="portfolio-gallery">
@@ -540,6 +480,14 @@
       </div>
     </section>
 
+    <!-- blogs show modal  -->
+    <div class="modalOverlay" id="modalOverlay">
+      <div class="modal">
+        <span class="close-button" id="closeModalButton">X</span>
+        <div id="modal"></div>
+      </div>
+    </div>
+
     <!-- blogs section  -->
     <section class="blog" id="blog">
       <div class="main-text">
@@ -548,96 +496,8 @@
       </div>
 
       <div class="blog-box swiper mySwiper">
-        <div class="cards swiper-wrapper">
-          <div class="card swiper-slide">
-            <div class="card-top">
-              <img src="img/blog/1.jpg" alt="" />
-            </div>
-            <div class="card-info">
-              <h2>Mobile App Landing Page</h2>
-              <span class="date">Sunday, Jan 14, 2023</span>
-              <p class="excerpt">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Maiores, illo.
-              </p>
-              <a href="#" class="readMore">Explore More</a>
-            </div>
-          </div>
-
-          <div class="card swiper-slide">
-            <div class="card-top">
-              <img src="img/blog/2.jpg" alt="" />
-            </div>
-            <div class="card-info">
-              <h2>Mobile App Landing Page</h2>
-              <span class="date">Sunday, Jan 14, 2023</span>
-              <p class="excerpt">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Maiores, illo.
-              </p>
-              <a href="#" class="readMore">Explore More</a>
-            </div>
-          </div>
-
-          <div class="card swiper-slide">
-            <div class="card-top">
-              <img src="img/blog/3.jpg" alt="" />
-            </div>
-            <div class="card-info">
-              <h2>Mobile App Landing Page</h2>
-              <span class="date">Sunday, Jan 14, 2023</span>
-              <p class="excerpt">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Maiores, illo.
-              </p>
-              <a href="#" class="readMore">Explore More</a>
-            </div>
-          </div>
-
-          <div class="card swiper-slide">
-            <div class="card-top">
-              <img src="img/blog/4.jpg" alt="" />
-            </div>
-            <div class="card-info">
-              <h2>Mobile App Landing Page</h2>
-              <span class="date">Sunday, Jan 14, 2023</span>
-              <p class="excerpt">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Maiores, illo.
-              </p>
-              <a href="#" class="readMore">Explore More</a>
-            </div>
-          </div>
-
-          <div class="card swiper-slide">
-            <div class="card-top">
-              <img src="img/blog/5.jpg" alt="" />
-            </div>
-            <div class="card-info">
-              <h2>Mobile App Landing Page</h2>
-              <span class="date">Sunday, Jan 14, 2023</span>
-              <p class="excerpt">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Maiores, illo.
-              </p>
-              <a href="#" class="readMore">Explore More</a>
-            </div>
-          </div>
-
-          <div class="card swiper-slide">
-            <div class="card-top">
-              <img src="img/blog/6.jpg" alt="" />
-            </div>
-            <div class="card-info">
-              <h2>Mobile App Landing Page</h2>
-              <span class="date">Sunday, Jan 14, 2023</span>
-              <p class="excerpt">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Maiores, illo.
-              </p>
-              <a href="#" class="readMore">Explore More</a>
-            </div>
-          </div>
+        <div id="cards" class="cards swiper-wrapper">
+          <!-- dynamically load blogs -->
         </div>
       </div>
 
@@ -653,6 +513,10 @@
 
     <!-- contact me section  -->
     <section class="down-box" id="contact">
+      <div class="main-text">
+        <h2 class="heading">Contact and Skills</h2>
+        <span>Here are core Skilled i Know</span>
+      </div>
       <div class="contactSkills">
         <div class="contact-info">
           <div class="main-text">
@@ -714,10 +578,10 @@
                         </defs>
                         <circle cx="85" cy="85" r="75" stroke-linecap="round" />
                       </svg>
-                      <h2 class="counter"><span data-target="80">0</span>%</h2>
+                      <h2 class="counter"><span data-target="70">0</span>%</h2>
                     </div>
                   </div>
-                  <div class="sk-title">JavaScript</div>
+                  <div class="sk-title">MongoDB</div>
                 </div>
 
                 <div class="skill">
@@ -737,7 +601,30 @@
                         </defs>
                         <circle cx="85" cy="85" r="75" stroke-linecap="round" />
                       </svg>
-                      <h2 class="counter"><span data-target="75">0</span>%</h2>
+                      <h2 class="counter"><span data-target="55">0</span>%</h2>
+                    </div>
+                  </div>
+                  <div class="sk-title">Express</div>
+                </div>
+
+                <div class="skill">
+                  <div class="outer-circle">
+                    <div class="inner-circle">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        version="1.1"
+                        width="180px"
+                        height="180px"
+                      >
+                        <defs>
+                          <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#e91e63" />
+                            <stop offset="100%" stop-color="#673ab7" />
+                          </linearGradient>
+                        </defs>
+                        <circle cx="85" cy="85" r="75" stroke-linecap="round" />
+                      </svg>
+                      <h2 class="counter"><span data-target="80">0</span>%</h2>
                     </div>
                   </div>
                   <div class="sk-title">React</div>
@@ -760,33 +647,10 @@
                         </defs>
                         <circle cx="85" cy="85" r="75" stroke-linecap="round" />
                       </svg>
-                      <h2 class="counter"><span data-target="60">0</span>%</h2>
-                    </div>
-                  </div>
-                  <div class="sk-title">Node</div>
-                </div>
-
-                <div class="skill">
-                  <div class="outer-circle">
-                    <div class="inner-circle">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        version="1.1"
-                        width="180px"
-                        height="180px"
-                      >
-                        <defs>
-                          <linearGradient id="GradientColor">
-                            <stop offset="0%" stop-color="#e91e63" />
-                            <stop offset="100%" stop-color="#673ab7" />
-                          </linearGradient>
-                        </defs>
-                        <circle cx="85" cy="85" r="75" stroke-linecap="round" />
-                      </svg>
                       <h2 class="counter"><span data-target="65">0</span>%</h2>
                     </div>
                   </div>
-                  <div class="sk-title">MongoDB</div>
+                  <div class="sk-title">Node</div>
                 </div>
               </div>
             </div>
@@ -795,9 +659,60 @@
       </div>
     </section>
 
-    <footer>
-      <p>Copyright © 2023 by <span>Mausd Rana</span> || All Right Reservd.</p>
-    </footer>
+    <!-- footer section with details  -->
+    <section>
+      <footer>
+        <div class="footer-container">
+          <div class="footer-logo">
+            <img src="/img/myPhoto.jpg" alt="Your Logo" />
+            <h2>Masud Rana</h2>
+            <span>Frontend Developer</span>
+            <!-- social media icons  -->
+          </div>
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#about">About Me</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#projects">Project</a></li>
+              <li><a href="#blog">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h3>Contact Me</h3>
+            <p>Email: masud.rana11311@gmail.com</p>
+            <p>Phone: 01792852446</p>
+          </div>
+          <div>
+            <h3>Connect With Me</h3>
+            <div class="social-media">
+              <div class="bg-icon">
+                <a href="#"><i class="bx bxl-instagram"></i></a>
+                <span></span>
+              </div>
+
+              <div class="bg-icon">
+                <a href="#"><i class="bx bxl-github"></i></a>
+                <span></span>
+              </div>
+
+              <div class="bg-icon">
+                <a href="#"><i class="bx bxl-twitter"></i></a>
+                <span></span>
+              </div>
+
+              <div class="bg-icon">
+                <a href="#"><i class="bx bxl-facebook"></i></a>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+          <p class="copyright-footer">Copyright © 2023 by <span>Mausd Rana</span> || All Right Reservd.</p>
+      </footer>
+    </section>
+   
 
     <div id="progress">
       <span id="progress-value">

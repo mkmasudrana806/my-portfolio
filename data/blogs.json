@@ -1,0 +1,37 @@
+[
+    {
+        "blog_id": "1",
+        "title": "What is frontend Development?",
+        "img": "https://img.freepik.com/free-vector/frontend-developer-typographic-header-website-interface-design-improvement-web-page-programming-coding-testing-it-profession-isolated-flat-vector-illustration_613284-304.jpg?w=2000",
+        "description": "Front-end development is the development of visual and interactive elements of a website that users interact with directly. It's a combination of HTML, CSS and JavaScript, where HTML provides the structure, CSS the styling and layout, and JavaScript the dynamic behaviour and interactivity.\n As a front-end developer, you'll be responsible for creating the user interface of a website, to ensure it looks good and is easy to use, with great focus on design principles and user experience. You'll be working closely with designers, back-end developers, and project managers to make sure the final product meets the client's needs and provides the best possible experience for the end-users.",
+        "date": "Sunday, Jan 14, 2023"
+    },
+    {
+        "blog_id": "2",
+        "title": "How to become frontend Developer?",
+        "img": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20201111215809/How-to-Become-a-Front-End-Developer-in-2020.png",
+        "description": "Start with learning HTML and CSS; don't wait to fully master these and start building simple projects as soon as possible. You could try rebuilding the frontend of your favorite websites using HTML and CSS to start with. Do as many of these projects as possible as you keep learning. Once you are somewhat comfortable with HTML and CSS, start learning some basic JavaScript (DOM manipulation, making AJAX calls etc) and learn how to add interactivity to your websites. While you are at it learn some basics of Git and GitHub. At this point you should be able to get an entry level frontend development job. Keep revisiting this roadmap and try to fill the gaps in your knowledge.",
+        "date": "Monday, july 05, 2020"
+    },
+    {
+        "blog_id": "3",
+        "title": "How long does it take to become a Frontend Developer?",
+        "img": "https://www.vdio.com/wp-content/uploads/2023/03/Screenshot_1-1-1536x761.png",
+        "description": "The amount of time it takes to become a frontend developer can vary depending on several factors, such as your learning pace, previous experience and the amount of time you are able to dedicate to learning.\nHowever, to give you a rough idea, if you are a complete beginner, it could take you anywhere from 3 to 6 months to get a job as an entry level frontend developer. If you are already familiar with some of the frontend technologies, it could take you anywhere from 1 to 3 months. What's important is to practice as much you can while you are learning i.e. by building as many projects as you can. You should also participate in online communities and ask for feedback from more experienced developers to accelerate your learning process.",
+        "date": "Wednesday, January 25, 2021"
+    },
+    {
+        "blog_id": "4",
+        "title": "What are the Frontend Developer salaries?",
+        "img": "https://devskiller.com/wp-content/uploads/2019/04/Salary-post-14-1-1536x864.jpg",
+        "description": "Frontend developer salaries can vary depending on factors such as location, experience, and company size. According to data from Glassdoor, the average base salary for a frontend developer in the United States is around $80,000 per year. However, this number can vary greatly depending on location, with the highest-paying cities such as San Francisco, Seattle, and New York having an average salary of $110,000 to $130,000.\n It's important to keep in mind that these are just averages, and salaries can vary greatly depending on factors such as experience level, specific skills, and the company you work for. With more experience and specific skills you can expect to earn more.\n It is worth looking at a range of resources, including salary surveys, and job boards to get a general understanding of the current market in your location and experience level. Also try reaching out to other professionals in the field and getting an understanding of their own experience and salary ranges.",
+        "date": "Friday, August 15, 2022"
+    },
+    {
+        "blog_id": "5",
+        "title": "What are the job titles of a Frontend Developer?",
+        "img":"https://assets.toptal.io/images?url=https%3A%2F%2Fbs-uploads.toptal.io%2Fblackfish-uploads%2Fcomponents%2Fblog_post_page%2Fcontent%2Fcover_image_file%2Fcover_image%2F1284735%2Fregular_1708x683_op-Ten-Front-End-Design-Rules-For-Developers_Luke-Newsletter-d3a7d3e7430ee224cab75104f11342a0.png",
+        "description": "Front-end developers are also known as front-end engineers, front-end web developers, JavaScript Developers, HTML/CSS Developer, front-end web designers, and front-end web architects.\nEach of these roles mostly encompass the same front-end development skills but require different levels of expertise in different front-end development skills. It's better to look at the job description to get an idea about the job requirements.",
+        "date": "Saturday, March 1, 2023"
+    }
+]
