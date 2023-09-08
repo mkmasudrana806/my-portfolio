@@ -39,6 +39,7 @@ body {
   /* font-family:  monospace; */
   background: var(--bg-color);
   overflow-x: hidden;
+  width: 100%;
 }
 
 .btn-simple {
@@ -111,6 +112,7 @@ header .logo {
 
 span {
   background: var(--gradient-color-bg);
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -131,6 +133,7 @@ ul.navlist {
 .navlist li a:hover,
 .navlist li a.active {
   background: var(--gradient-color-bg);
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -222,7 +225,7 @@ section {
 }
 
 .text-animate {
-  width: 22.8rem;
+  width: 24.5rem;
   position: relative;
 }
 
@@ -234,6 +237,7 @@ section {
   -webkit-text-stroke: 0.1vw #770753;
   background: var(--gradient-color-bg);
   background-repeat: no-repeat;
+  background-clip: text;
   -webkit-background-clip: text;
   background-position: 0 0;
   transition: 0.6s;
@@ -1179,7 +1183,9 @@ h2.counter span {
 /*======================= BrakPoints ============================ */
 
 @media (max-width: 1200px) {
-  html {
+  h1,
+  h2,
+  h3 {
     font-size: 95%;
   }
 }
@@ -1280,7 +1286,7 @@ h2.counter span {
 
 @media (max-width: 530px) {
   html {
-    font-size: 80%;
+    font-size: 90%;
   }
   section {
     padding: 50px 3%;
@@ -1298,11 +1304,11 @@ h2.counter span {
     width: 100%;
   }
   .text-animate {
-    width: 23.8rem;
+    width: 25rem;
   }
   .btn-box {
-    width: 266px;
-    margin-bottom: 3rem;
+    width: 290px;
+    margin-bottom: 2rem;
   }
   .about-btn button {
     padding: 10px 15px;

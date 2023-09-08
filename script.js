@@ -317,7 +317,7 @@ function sendEmail() {
   } else showToast(0);
 }
 
-// show toast
+// show custom toast
 function showToast(res) {
   // toast message when email is succesfully send
   const toastContainer = document.getElementById("toastContainer");
